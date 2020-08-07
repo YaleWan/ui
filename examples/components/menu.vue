@@ -35,6 +35,9 @@
           <el-menu-item index="/giftWheel">转盘抽奖</el-menu-item>
         </el-menu-item-group>
         <el-menu-item-group>
+          <el-menu-item index="/carselector">车型选择器</el-menu-item>
+        </el-menu-item-group>
+        <el-menu-item-group>
           <el-menu-item index="/test">test</el-menu-item>
         </el-menu-item-group>
         <el-menu-item-group>
@@ -70,5 +73,3 @@ export default {
   methods: {}
 }
 </script>
-
-<style lang="css"></style>
