@@ -8,4 +8,5 @@ coverage
 *.md
 *.scss
 *.woff
-*.ttf
+*.ttf\
+.vscode

@@ -9,7 +9,8 @@
   "scripts": {
     "example": "vue-cli-service serve --mode example",
     "lib": "vue-cli-service build --mode lib",
-    "doc": "npm run lib && vue-cli-service build --mode doc",
+    "doc": "vue-cli-service build --mode doc",
+    "build": "npm run lib && npm run doc ",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint"
