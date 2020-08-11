@@ -11,21 +11,20 @@
 在 main.js 中写入以下内容：
 
 ```javascript
-import Vue from 'vue';
-import C3Ui from 'c3-ui';
-import 'c3-ui/lib/theme/index.css';
-import App from './App.vue';
+import Vue from "vue";
+import C3Ui from "c3-ui";
+import "c3-ui/lib/theme/index.css";
+import App from "./App.vue";
 
 Vue.use(C3Ui);
 
 new Vue({
-  el: '#app',
-  render: h => h(App)
+  el: "#app",
+  render: (h) => h(App),
 });
 ```
 
 注意：样式文件需要单独引入。
-
 
 #### 按需引入
 
@@ -41,33 +40,33 @@ npm install babel-plugin-component -D
 
 ```json
 {
-  "presets": [["es2015", { "modules": false }]],
   "plugins": [
     [
       "component",
       {
         "libraryName": "c3-ui",
-        "styleLibraryName": "theme"
+        "camel2Dash": false,
+        "styleLibrary": {
+          "name": "style",
+          "base": false
+        }
       }
     ]
   ]
 }
 ```
 
-接下来，如果你只希望引入部分组件，比如 只需要引入素材通用模块中的Content（latex转义html解析），那么需要在 main.js 中写入以下内容：
+接下来，如果你只希望引入部分组件，比如 只需要引入素材通用模块中的 Content（latex 转义 html 解析），那么需要在 main.js 中写入以下内容：
 
 ```javascript
-import Vue from 'vue';
-import { Input } from 'c3-ui';
-import App from './App.vue';
+import Vue from "vue";
+import { Input } from "c3-ui";
+import App from "./App.vue";
 
-Vue.component(Input.name, Input);
-/* 或写为
- * Vue.use(Input)
- */
+Vue.use(Input)
 
 new Vue({
-  el: '#app',
-  render: h => h(App)
+  el: "#app",
+  render: (h) => h(App),
 });
 ```
